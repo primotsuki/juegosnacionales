@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barriecito');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Lato', sans-serif;
+}
