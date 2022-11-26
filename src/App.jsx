@@ -12,7 +12,7 @@ import 'slick-carousel/slick/slick-theme.css';
 function App() {
 
   return (
-    <div className='m-0 w-full h-full'>
+    <div className='max-w-[100%] m-0 w-full h-full'>
           <Header/>
           <HomePage />
           <Disciplines />

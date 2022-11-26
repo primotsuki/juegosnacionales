@@ -13,7 +13,7 @@ const Footer = () => {
         location: 'https://goo.gl/maps/rszw9FKvXPdMSMte6'
     }]
     return (
-        <footer className="w-screen md:h-[50vh] bg-obs text-white grid grid-cols-3 gap-4">
+        <footer className="w-screen max-w-[100%] md:h-[50vh] bg-obs text-white grid grid-cols-3 gap-4">
             <div id='ubicaciones' className="col-span-full md:col-span-1 flex flex-col items-center justify-center p-4">
                 <h1 className="text-3xl py-3">Lugares principales del evento</h1>
                 <ul>

@@ -1,6 +1,6 @@
 const Header = () => {
     return (
-        <nav className="bg-white h-14 shadow-md flex flex-row items-center justify-between fixed w-screen z-20">
+        <nav className="bg-white h-14 shadow-md flex flex-row items-center justify-between fixed w-screen max-w-[100%] z-20">
             <div className="md:hidden">
                 <button className="px-3 text-lg"><i class="fa-solid fa-bars"></i></button>
             </div>

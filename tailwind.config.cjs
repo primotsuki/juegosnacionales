@@ -22,6 +22,7 @@ module.exports = {
       amber: '#facc15',
       rose: '#be123c',
       obs: '#334155',
+      sky: '#0478b3',
       white: 'white',
       indi: '#3730a3',
       gray:{
