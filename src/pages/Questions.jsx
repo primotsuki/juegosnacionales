@@ -4,7 +4,7 @@ const Question = ( {question}) => {
     const [open, setOpen] = useState(false);
     return (
     <div id='question' className="w-full border-b border-gray-200 flex flex-col items-center">
-        <div className='flex flex-row w-full justify-between items-start'>
+        <div className='flex flex-row w-full justify-between items-start py-3'>
             <h2 className='text-2xl text-obs'>{question.question}</h2>
             <button onClick={() => {setOpen(!open)}} className='p-2'>
                 {
@@ -15,7 +15,7 @@ const Question = ( {question}) => {
                 }
             </button>
         </div>
-        <ul className={`font-raleway text-lg flex flex-col w-10/12 ${ !open && 'hidden'} list-disc`}>{
+        <ul className={`font-raleway text-lg flex flex-col w-10/12 pb-3 ${ !open && 'hidden'} list-disc`}>{
             question.answers.map((answer, i)=> (
                 <li key={i}>
                     {answer}
@@ -32,8 +32,7 @@ const Questions = () => {
     const questions = [{
         question: 'Quienes pueden participar del evento?',
         answers: ['Todos los miembros de las Uniones de Jovenes Bautistas de Bolivia', 
-                    'Las personas con membresia y con una antiguedad de mas de 2 años en sus iglesias.',
-                '']
+                    'Las personas con membresia y con una antiguedad de mas de 2 años en sus iglesias.']
     }, {
         question: 'como puedo participar del evento?',
         answers: [
@@ -54,15 +53,15 @@ const Questions = () => {
             aqui</a> </span>
         ]
     }, {
-        question: 'Como se definira los Ganadores',
+        question: 'Como se definira los Ganadores?',
         answers:[
             'Tendremos un Podia premiando a los 3 mejores distritos de los juegos',
             'Para el podio se tomara en cuenta la totalidad de disciplinas en las que participo cada distrito'
         ]
     }]
     return (
-        <div className="max-w-[100%] flex flex-col flex-wrap items-center justify-start">
-            <h1 className="text-3xl pb-12">Preguntas frecuentes</h1>
+        <div className="max-w-[100%] flex flex-col flex-wrap items-center justify-start py-10">
+            <h1 className="text-3xl pb-12 font-barriecito">Preguntas frecuentes</h1>
             <div id="accordion" className="w-full md:w-1/2 px-4">
                 {questions.map(elem => <Question question={elem}/>)}
             </div>

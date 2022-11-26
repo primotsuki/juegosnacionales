@@ -1,9 +1,8 @@
-const CardPartner = () => {
+const CardPartner = ( {logo, name} ) => {
     return (
-        <div className="max-w-md flex flex-col items-center p-4 border border-gray-200 rounded-md shadow-md m-3">
-            <img src="/diaconia.jpg" alt="auspiciador" className="w-24 rounded-full border "/>
-            <h3 >Diaconia IFD</h3>
-            <p className="text-center font-raleway">fondo de desarrollo para el pueblo alteno</p>
+        <div className="max-w-md flex flex-col items-center m-3">
+            <img src={logo} alt="auspiciador" className="w-24 h-24 block rounded-full border "/>
+            <h4 className="font-raleway text-center text-xs">{name}</h4>
         </div>
     )
 }
