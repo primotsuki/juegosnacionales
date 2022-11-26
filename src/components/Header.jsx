@@ -1,20 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect, useRef} from "react";
 import SideMenu from "./SideMenu/SideMenu";
 
 const Header = () => {
 
     const [ open, setOpen ] = useState(false);
+    const navElem = useRef(null);
     const handleOpen = () => {
         console.log('openning menu')
         setOpen(true);
     };
     const handleClose = () =>{
-        console.log('closing menu')
         setOpen(false);
     }
+    useEffect(()=>{
+        setTimeout(()=>{
+            navElem.current.firstChild.classList.add('hide_menu`')
+        })
+    },[])
     return (
-        <nav className="bg-white h-14 shadow-md flex flex-row items-center justify-between fixed w-screen max-w-[100%] z-20">
-            <SideMenu open={open} handleOpen={handleOpen} handleClose={handleClose} pageWrapId={'sideMenuBar'} outerContainerId={'app'}/>
+        <nav ref={navElem} className="bg-white h-14 shadow-md flex flex-row items-center justify-between fixed w-screen max-w-[100%] z-20">
+            <SideMenu className="md:hidden" open={open} handleOpen={handleOpen} handleClose={handleClose} pageWrapId={'sideMenuBar'} outerContainerId={'app'}/>
            <div className="px-2 flex flex-row items-center">
             <h2>Juegos Bautistas El Alto 2023</h2>
             <img src="/Olympic_rings.svg" className="w-20 h-14 px-2"/>

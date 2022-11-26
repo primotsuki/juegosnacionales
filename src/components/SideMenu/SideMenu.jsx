@@ -2,7 +2,6 @@ import { slide as Menu } from "react-burger-menu";
 import './sideMenu.css';
 
 const SideMenu = ({open, handleOpen, handleClose, ...rest}) => {
-    console.log(open)
     return (
         <Menu {...rest}
         isOpen={open} 

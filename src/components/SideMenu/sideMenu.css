@@ -60,4 +60,11 @@
   .bm-menu-wrap{
     top: 0;
   }
+
+  @media (min-width: 768px) {
+    .hide_menu {
+        display: none;
+    }
+}
+
   
