@@ -60,12 +60,12 @@ const Questions = () => {
         ]
     }]
     return (
-        <div className="max-w-[100%] flex flex-col flex-wrap items-center justify-start py-10">
+        <section id="questions" className="max-w-[100%] flex flex-col flex-wrap items-center justify-start py-10">
             <h1 className="text-3xl pb-12 font-barriecito">Preguntas frecuentes</h1>
             <div id="accordion" className="w-full md:w-1/2 px-4">
-                {questions.map(elem => <Question question={elem}/>)}
+                {questions.map((elem, i) => <Question key={i}question={elem}/>)}
             </div>
-        </div>
+        </section>
     )
 };
 

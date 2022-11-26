@@ -58,7 +58,7 @@ class Disciplines extends Component {
               }]
           };
         return (
-            <div className="md:h-[75vh] w-screen max-w-[100%] flex flex-col items-center p-3">
+            <section id="disciplines" className="md:h-[75vh] w-screen max-w-[100%] flex flex-col items-center p-3">
                 <div id='heading' className='h-40 flex items-center'>
                     <h1 className='text-4xl font-barriecito'>Disciplinas a Realizarse</h1>
                 </div>
@@ -69,7 +69,7 @@ class Disciplines extends Component {
                         )
                     })}
                 </Slider>
-            </div>
+            </section>
         )
     }
 }

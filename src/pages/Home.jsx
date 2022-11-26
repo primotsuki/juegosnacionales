@@ -1,6 +1,6 @@
 const HomePage = () => {
     return (
-        <main className="max-w-[100%] flex flex-row flex-wrap items-center justify-end h-[75vh] md:h-screen md:bg-[url('/futbol.png')] bg-no-repeat bg-contain">
+        <main id="home-page" className="max-w-[100%] flex flex-row flex-wrap items-center justify-end h-[75vh] md:h-screen md:bg-[url('/futbol.png')] bg-no-repeat bg-contain">
             <div className="flex flex-col items-center md:items-end md:pr-14">
                 <img src="/olimpiadas_logo_2.png" alt="logo_unidos" className="w-80 md:w-96 md:py-0 py-4"/>
                 <span className="text-2xl md:text-3xl text-center">Juegos Nacionales Bautistas</span>
