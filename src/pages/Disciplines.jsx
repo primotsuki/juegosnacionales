@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import CardInfo from '../components/disciplines/CardInfo'
 import Slider from 'react-slick';
+import './disciplines.css'
 const disciplinas = [{
     title: 'Futbol y Fustal',
     color: 'bg-obs',
@@ -43,11 +44,13 @@ class Disciplines extends Component {
     render () {
         const settings = {
             dots: true,
+            //arrows:true,
             infinite: true,
             speed: 300,
             slidesToShow: 3,
             slidesToScroll: 1,
             autoPlay: true,
+            prevArrow: <button className='text-obs z-50 left-4'><i class="fa-solid fa-chevrons-left"></i></button>,
             responsive: [
               {
                 breakpoint: 480,

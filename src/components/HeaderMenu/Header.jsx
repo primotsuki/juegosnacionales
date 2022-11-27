@@ -1,25 +1,55 @@
 import { useState, useEffect, useRef} from "react";
-import SideMenu from "./SideMenu/SideMenu";
+import { slide as Menu } from "react-burger-menu";
+import './sideMenu.css';
+
+const menuItems = [{
+    name: 'Inicio',
+    url: '#home'
+}, {
+    name: 'Disciplinas',
+    url: '#disciplines'
+}, {
+    name: 'Preguntas frecuentes',
+    url: '#questions'
+}, {
+    name: 'Mas informacion',
+    url: '#footer'
+}, {
+    name: 'Inscripciones',
+    url: '#'
+}, {
+    name: 'resultados',
+    url: '#'
+}]
 
 const Header = () => {
 
     const [ open, setOpen ] = useState(false);
     const navElem = useRef(null);
     const handleOpen = () => {
-        console.log('openning menu')
         setOpen(true);
+        setTimeout(()=>{
+
+        })
     };
     const handleClose = () =>{
         setOpen(false);
     }
-    useEffect(()=>{
-        setTimeout(()=>{
-            navElem.current.firstChild.classList.add('hide_menu`')
-        })
-    },[])
     return (
         <nav ref={navElem} className="bg-white h-14 shadow-md flex flex-row items-center justify-between fixed w-screen max-w-[100%] z-20">
-            <SideMenu className="md:hidden" open={open} handleOpen={handleOpen} handleClose={handleClose} pageWrapId={'sideMenuBar'} outerContainerId={'app'}/>
+            {open && 
+            <Menu
+                isOpen={open} 
+            >
+            <button onClick={handleClose} className="!flex w-full flex-row justify-end"><i class="fa-solid fa-xmark"></i></button>
+            {menuItems.map(elem=>{
+                return(
+                    <a href={elem.url} onClick={handleClose}>{elem.name}</a>
+                )
+            })}
+
+        </Menu>}
+           <button onClick={handleOpen} className="px-4 md:hidden"><i className="fa-solid fa-bars"></i></button>
            <div className="px-2 flex flex-row items-center">
             <h2>Juegos Bautistas El Alto 2023</h2>
             <img src="/Olympic_rings.svg" className="w-20 h-14 px-2"/>

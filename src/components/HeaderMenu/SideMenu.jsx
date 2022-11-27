@@ -4,8 +4,8 @@ import './sideMenu.css';
 const SideMenu = ({open, handleOpen, handleClose, ...rest}) => {
     return (
         <Menu {...rest}
-        isOpen={open} 
-        customBurgerIcon={<i onClick={handleOpen} className="fa-solid fa-bars"></i>}
+        isOpen={false} 
+        //customBurgerIcon={<i onClick={handleOpen} className="fa-solid fa-bars"></i>}
         >
             <a href="#home" onClick={handleClose}>Inicio</a>
             <a href="#disciplines" onClick={handleClose}>Disciplinas</a>

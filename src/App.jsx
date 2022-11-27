@@ -1,12 +1,11 @@
 import './App.css'
 
-import Header from './components/Header';
+import Header from './components/HeaderMenu/Header';
 import HomePage from './pages/Home';
 import Disciplines from './pages/Disciplines';
 import Footer from './pages/Footer';
 import Questions from './pages/Questions';
 import Partners from './pages/Partners';
-import SideMenu from './components/SideMenu/SideMenu';
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css';
